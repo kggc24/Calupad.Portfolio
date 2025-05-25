@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristine's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text globally */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Overlay for content sections to ensure readability against black background */
+        .content-section-bg {
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for content cards */
+            backdrop-filter: blur(5px); /* Optional blur effect */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+        }
+
+        
+        .nav-button {
+            @apply px-6 py-3 bg-white text-gray-900 font-semibold rounded-full shadow-lg hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105;
+        }
+
+        
+        .back-button {
+            @apply mt-12 px-8 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105;
+        }
+
+        
+        #homePage {
+            background-image: url('uploaded:Portfolio.png-c4aa6f8d-58ed-45a5-894c-096a573505f9'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="homePage" class="page-section flex-grow flex flex-col">
+        <header class="py-8 text-white text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-2">
+                UNFOLDED
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-gray-200">
+                A visual exploration of my passion for photography, 3D modeling, and traditional arts.
+            </p>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-12 flex items-center justify-center">
+            <div class="content-section-bg p-8 md:p-12 max-w-3xl w-full text-center">
+                <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/Portfolio.png" alt="Kristine's Profile Picture" class="w-48 h-48 rounded-full object-cover mx-auto mb-6"> <p class="text-2xl md:text-3xl font-light leading-relaxed mb-10 text-gray-100">
+                    Kristine's lifelong passion for photography evolved from a hobby into an integral part of her life, driven by her love for capturing moments and transforming them into lasting memories. Beyond the lens, she also deeply appreciates acrylic painting for its vibrant versatility and has found a rewarding new passion in 3D modeling, where she enjoys bringing abstract concepts to life digitally.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+                    <button id="showPhotography" class="nav-button">Through the Lens</button>
+                    <button id="show3DModeling" class="nav-button">Rendered Realities</button>
+                    <button id="showTraditionalArt" class="nav-button">Brushstrokes and Beyond</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="py-6 text-white text-center">
+            <div class="container mx-auto px-4">
+                <p class="text-lg font-light">
+                    Follow me on social media Instagram: <span class="font-semibold">@krisistiyn</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="photographyPage" class="page-section hidden flex-grow flex-col">
+        <header class="py-8 text-white text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-2">
+                Through the Lens
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-gray-200">
+                A collection of my photographic works.
+            </p>
+        </header>
+        <main class="flex-grow container mx-auto px-4 py-12">
+            <div class="content-section-bg p-8 md:p-12 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/streetphotog1.png" alt="Landscape Photography 1" class="w-full h-64 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Street Photography</h3>
+                            <p class="text-sm text-gray-300 mt-1">Caught in the current of the street.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/NATUREPHOTOG.png" alt="Landscape Photography 2" class="w-full h-64 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Paws and Coffee</h3>
+                            <p class="text-sm text-gray-300 mt-1">Aperfect blend of comfort.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="backToHomeFromPhoto" class="back-button">Back to Home</button>
+            </div>
+        </main>
+        <footer class="py-6 text-white text-center">
+            <div class="container mx-auto px-4">
+                <p class="text-lg font-light">
+                    Follow me on social media Instagram: <span class="font-semibold">@krisistiyn</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="3dModelingPage" class="page-section hidden flex-grow flex-col">
+        <header class="py-8 text-white text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-2">
+                Rendered Realities
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-gray-200">
+                My work in digital sculpting and visualization.
+            </p>
+        </header>
+        <main class="flex-grow container mx-auto px-4 py-12">
+            <div class="content-section-bg p-8 md:p-12 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/CuckooClockBlen.png" alt="Animated Cuckoo Clock 3D Model" class="w-full h-64 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Whimsical Cuckoo Clock</h3>
+                            <p class="text-sm text-gray-300 mt-1">A 3D model of an animated cuckoo clock.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/Beanbag.png" alt="3D Furniture Model" class="w-full h-64 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Modern Beanbag Chair</h3>
+                            <p class="text-sm text-gray-300 mt-1">A sleek 3D render of a contemporary furniture piece.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="backToHomeFrom3D" class="back-button">Back to Home</button>
+            </div>
+        </main>
+        <footer class="py-6 text-white text-center">
+            <div class="container mx-auto px-4">
+                <p class="text-lg font-light">
+                    Follow me on social media Instagram: <span class="font-semibold">@krisistiyn</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="traditionalArtPage" class="page-section hidden flex-grow flex-col">
+        <header class="py-8 text-white text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-2">
+                Brushstrokes and Beyond
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-gray-200">
+                My creations using traditional mediums.
+            </p>
+        </header>
+        <main class="flex-grow container mx-auto px-4 py-12">
+            <div class="content-section-bg p-8 md:p-12 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/ADVTIME.png" alt="Traditional Art Cartoon Character 1" class="w-full h-64 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Cartoon Character</h3>
+                            <p class="text-sm text-gray-300 mt-1">Pop culture reimagined.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                        <img src="C:\Users\Kristine\Desktop\SCHOOL\HTML/Trad art.png" alt="Traditional Art Cartoon Character 2" class="w-full h-64 object-cover rounded-t-lg">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-white">Random Paintings</h3>
+                            <p class="text-sm text-gray-300 mt-1">Through abstract eyes.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="backToHomeFromArt" class="back-button">Back to Home</button>
+            </div>
+        </main>
+        <footer class="py-6 text-white text-center">
+            <div class="container mx-auto px-4">
+                <p class="text-lg font-light">
+                    Follow me on social media Instagram: <span class="font-semibold">@krisistiyn</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const homePage = document.getElementById('homePage');
+        const photographyPage = document.getElementById('photographyPage');
+        const dModelingPage = document.getElementById('3dModelingPage');
+        const traditionalArtPage = document.getElementById('traditionalArtPage');
+
+        const showPhotographyBtn = document.getElementById('showPhotography');
+        const show3DModelingBtn = document.getElementById('show3DModeling');
+        const showTraditionalArtBtn = document.getElementById('showTraditionalArt');
+
+        const backToHomeFromPhotoBtn = document.getElementById('backToHomeFromPhoto');
+        const backToHomeFrom3DBtn = document.getElementById('backToHomeFrom3D');
+        const backToHomeFromArtBtn = document.getElementById('backToHomeFromArt');
+
+        
+        function hideAllPages() {
+            homePage.classList.add('hidden');
+            photographyPage.classList.add('hidden');
+            dModelingPage.classList.add('hidden');
+            traditionalArtPage.classList.add('hidden');
+
+            homePage.classList.remove('flex');
+            photographyPage.classList.remove('flex');
+            dModelingPage.classList.remove('flex');
+            traditionalArtPage.classList.remove('flex');
+        }
+
+        
+        function showPage(pageElement) {
+            hideAllPages();
+            pageElement.classList.remove('hidden');
+            pageElement.classList.add('flex');
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+       
+        showPhotographyBtn.addEventListener('click', () => showPage(photographyPage));
+        show3DModelingBtn.addEventListener('click', () => showPage(dModelingPage));
+        showTraditionalArtBtn.addEventListener('click', () => showPage(traditionalArtPage));
+
+        backToHomeFromPhotoBtn.addEventListener('click', () => showPage(homePage));
+        backToHomeFrom3DBtn.addEventListener('click', () => showPage(homePage));
+        backToHomeFromArtBtn.addEventListener('click', () => showPage(homePage));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage(homePage);
+        });
+    </script>
+</body>
+</html>
